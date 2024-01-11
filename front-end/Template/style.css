@@ -1,0 +1,14 @@
+body {
+    background-color: #1A2741;
+    border: 10px solid #122241;
+    margin: 0px;
+}
+
+#Linssen_Logo {
+    width: 60%;
+    height: auto;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
