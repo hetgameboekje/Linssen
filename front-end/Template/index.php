@@ -12,8 +12,6 @@
 
 <div id="Layout">
     <img src="../Images/Linssen_Blue.jpeg" id="Linssen_Logo">
-
-
 </div>
 
 
