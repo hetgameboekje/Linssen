@@ -10,9 +10,8 @@
 </head>
 <body>
 
-<div id="Layout">
-    <img src="../Images/Linssen_Blue.jpeg" id="Linssen_Logo">
-</div>
+<img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+
 
 
     

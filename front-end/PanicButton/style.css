@@ -4,12 +4,33 @@ body {
     margin: 0px;
 }
 
-#Linssen_Logo {
-    width: 25%;
-    height: auto;
+/*Layout*/
+
+#LinssenLogo {
+    width: clamp(50px, 20%, 80px);
     border-radius: 100%;
 
     position: absolute;
     left: 50%;
     transform: translate(-50%, -35%);
+}
+
+#MeldenDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#MeldenBtn {
+    width: 100px;
+    height: 100px;
+
+    background-color: red;
+    color: white;
+}
+
+#UserFooter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 100%);
 }
