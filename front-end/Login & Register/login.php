@@ -11,7 +11,7 @@
 <body>
 
 <div id="Layout">
-    <img src="../Images/Linssen_Blue.jpeg" id="Linssen_Logo">
+    <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
 
 
 </div>
