@@ -16,7 +16,7 @@
     </header>
 
     <footer>
-        <a href="../Login"><button id="UserBtn"> LOGIN </button></a>
+        <a href="../LoginRegister/Login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
 </div>
 
