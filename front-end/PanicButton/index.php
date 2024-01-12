@@ -10,20 +10,21 @@
 </head>
 <body>
 
+<div id="Layout">
+    <header>
+        <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+    </header>
 
-<header>
-    <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
-</header>
-
-<div id="MeldenDiv">
-    <div id="MeldenBtn_1"></div>
-    <a href="../IncidentenInfo"><button id="MeldenBtn"> Melden </button></a>
+    <footer>
+        <a href="../Login"><button id="UserBtn"> LOGIN </button></a>
+    </footer>
 </div>
 
-<footer id="UserFooter">
-    <a href="../Login"><button id="UserBtn"> Login </button></a>
-</footer>
-
+<div id="MeldenDiv">
+    <a href="../IncidentenInfo">
+        <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
+    <button id="MeldenBtn"> MELDEN </button></a>
+</div>
 
 </body>
 </html>

@@ -10,8 +10,15 @@
 </head>
 <body>
 
-<img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+<div id="Layout">
+    <header>
+        <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+    </header>
 
+    <footer>
+        <a href="../Login"><button id="UserBtn"> LOGIN </button></a>
+    </footer>
+</div>
 
 
     
