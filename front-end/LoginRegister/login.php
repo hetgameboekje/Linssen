@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 <div id="Layout">
     <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+
+
 </div>
 
-<div class="register">
-    <form action="../backend/LoginRegister/register.php" method="post">
-        <label for="chk" aria-hidden="true">Register</label>
+<div class="login">
+    <form action="" method="post">
+        <label for="chk" aria-hidden="true">Login</label>
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-        <button type="submit" name="submit" value="submit" class="button">Register</button>
+        <button type="submit" name="submit" value="submit" class="button">Login</button>
     </form>
 </div>
 
+
+
+    
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require_once('../backend/Database/DB_connect.php');
+require_once('../../backend/Database/DB_connect.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get user input
@@ -22,6 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         echo "Registration successful!";
+        // Redirect to a dashboard or home page
+        header("Location: ../../front-end/PanicButton/index.php");
+        exit();        
+
     } else {
         echo "Error during registration: " . $stmt->error;
     }
