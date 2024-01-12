@@ -3,7 +3,7 @@ session_start();
 
 // Include the database configuration or connect to your database
 
-include "../backend/Database/DB_connect";
+include "../../backend/Database/DB_connect.php";
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $username;
 
         // Redirect to a dashboard or home page
-        header("Location: ../front-end/PanicButton/index.php");
+        header("Location: ../../front-end/PanicButton/index.php");
         exit();
     } else {
         // Invalid username or password
