@@ -2,6 +2,7 @@ body {
     background-color: #1A2741;
     border: 10px solid #122241;
     margin: 0px;
+    height: 100vh;
 }
 
 #LinssenLogo {
@@ -12,4 +13,11 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -35%);
+}
+
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
 }
