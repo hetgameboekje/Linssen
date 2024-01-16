@@ -33,7 +33,7 @@ body {
     border: 0px;
 
     color: white;
-    font-size: 20px;
+    font-size: clamp(16px, 20%, 20px);
     font-weight: bold;
 
     width: clamp(100px, 50%, 150px);
@@ -49,8 +49,8 @@ body {
     flex-direction: column;
 
     position: relative;
-    top: 7.5%;
-    margin-top: 5%;
+    top: 5%;
+    margin-top: 25px;
 }
 
 .OngevalBtn {
@@ -71,4 +71,40 @@ body {
 
 #OBtn {
     background-color: #A90505;
+}
+
+#AnnulerenBtn {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%); 
+
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    background-color: #A90505;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 230px;
+    height: 40px;
+}
+
+#InfoBox {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+
+    width: clamp(240px, 50%, 700px);
+    height: clamp(280px, 50%, 500px);
+
+    background-color: #0000003f;
+    border: none;
+    border-radius: 5%;
+    color: white;
+
+    padding: 10px;
 }

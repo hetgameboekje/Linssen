@@ -10,6 +10,8 @@
 </head>
 <body>
 
+
+
 <div id="Layout">
     <header>
         <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
@@ -20,13 +22,15 @@
     </footer>
 </div>
 
+
+
 <a class="OngevalDiv"><button class="OngevalBtn" id="ZOBtn">ZWAAR ONGEVAL</button></a>
 
 <a class="OngevalDiv"><button class="OngevalBtn" id="OBtn">ONGEVAL</button></a>
 
+<div class="OngevalDiv"><textarea name="Infobox" id="InfoBox" placeholder="Verdere relevante informatie..."></textarea></div>
 
-
-
+<a href="../PanicButton"><button id="AnnulerenBtn">ANNULEREN</button></a>
     
 </body>
 </html>
