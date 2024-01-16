@@ -14,10 +14,12 @@
     <header>
         <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
     </header>
+    <!-- php include header -->
 
     <footer>
         <a href="../LoginRegister/Login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
+    <!-- php include footer -->
 </div>
 
 

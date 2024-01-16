@@ -29,4 +29,4 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
         });
     });
   }
-  
+  // node js server required --> bergthaler-ict.nl

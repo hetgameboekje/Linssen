@@ -11,6 +11,7 @@
 <div id="Layout">
     <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
 </div>
+<!-- php include header -->
 
 <div class="register">
     <form action="../../backend/LoginRegister/register.php" method="post">

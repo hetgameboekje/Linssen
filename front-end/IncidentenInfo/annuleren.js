@@ -17,3 +17,5 @@ function AnnulerenConfirm() {
         }, 1000);
     }
 }
+// create a function when pressed it adds to a variable
+// when button_press > 1 run function script

@@ -7,3 +7,6 @@ $db->insertBitValue($bit_value);
 header('Location: ../../front-end/PanicButton/index.php');
 exit;
 ?>
+
+
+<!-- fix traversel directory path -->
