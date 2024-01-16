@@ -16,12 +16,12 @@
     </header>
 
     <footer>
-        <a href="../LoginRegister/Login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="/linssen/front-end/LoginRegister/login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
 </div>
 
 <div id="MeldenDiv">
-<form action="../../backend/panicPress/panicPress.php" method="post">
+<form action="/backend/panicPress/panicPress.php" method="post">
     <a href="../IncidentenInfo">
         <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
     <button id="MeldenBtn"> MELDEN </button></a>
