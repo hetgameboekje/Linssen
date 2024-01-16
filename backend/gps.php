@@ -22,7 +22,7 @@
                     // Update the HTML elements with the obtained coordinates
                     document.getElementById("latitude").innerText += latitude;
                     document.getElementById("longitude").innerText += longitude;
-                    <?php $latitude = ; ?> latitude 
+                    
                 }, 
                 function(error) {
                     console.error("Error getting location:", error.message);
