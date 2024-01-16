@@ -1,15 +1,19 @@
 function AnnulerenConfirm() {
-    document.getElementById("AnnulerenBtn").textContent="Confirm binnen 3";
-    setTimeout(function(){
-        document.getElementById("AnnulerenBtn").textContent="Confirm binnen 2";
-        setTimeout(function(){
-            document.getElementById("AnnulerenBtn").textContent="Confirm binnen 1";
-            setTimeout(function(){
-                document.getElementById("AnnulerenBtn").textContent="ANNULEREN";
-                }
-                ,1000);
+    let annuleer_button = 3;
+    const annulerenBtn = document.getElementById("AnnulerenBtn");
+
+    if (annuleer_button > 0) {
+        annulerenBtn.textContent = "Confirm binnen " + annuleer_button;
+
+        const countdownInterval = setInterval(function () {
+            annuleer_button--;
+
+            if (annuleer_button > 0) {
+                annulerenBtn.textContent = "Confirm binnen " + annuleer_button;
+            } else {
+                clearInterval(countdownInterval);
+                annulerenBtn.textContent = "Melding verstuurd!";
             }
-            ,1000);
-        }
-        ,1000);
+        }, 1000);
+    }
 }
