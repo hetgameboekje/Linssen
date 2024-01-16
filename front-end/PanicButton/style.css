@@ -3,6 +3,12 @@ body {
     border: 15px solid #122241;
     margin: 0px;
     height: 100vh;
+
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*Layout*/
@@ -25,7 +31,6 @@ body {
 
     background-color: #122241;
     border: 0px;
-
 
     color: white;
     font-size: clamp(20px, 20%, 40px);
@@ -67,7 +72,5 @@ body {
 
     width: 200px;
     height: auto;
-
-
 }
 

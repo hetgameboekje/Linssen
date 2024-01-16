@@ -3,6 +3,12 @@ body {
     border: 15px solid #122241;
     margin: 0px;
     height: 100vh;
+
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*Layout*/

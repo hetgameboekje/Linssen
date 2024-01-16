@@ -1,0 +1,74 @@
+body {
+    background-color: #1A2741;
+    border: 15px solid #122241;
+    margin: 0px;
+    height: 100vh;
+
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*Layout*/
+
+#LinssenLogo {
+    width: clamp(50px, 20%, 80px);
+    border-radius: 100%;
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    
+}
+
+#UserBtn {
+    position: absolute;
+    left: 50%;
+    top: 97.5%;
+    transform: translate(-50%);
+
+    background-color: #122241;
+    border: 0px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    width: clamp(100px, 50%, 150px);
+    height: clamp(30px, 50%, 45px);
+}
+
+/*Ongevals Buttons*/
+
+.OngevalDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+    top: 7.5%;
+    margin-top: 5%;
+}
+
+.OngevalBtn {
+    border-width: 0;
+    border-radius: 25px;
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    width: 270px;
+    height: 75px;
+}
+
+#ZOBtn {
+    background-color: #730000;
+}
+
+#OBtn {
+    background-color: #A90505;
+}
