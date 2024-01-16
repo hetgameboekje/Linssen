@@ -21,6 +21,7 @@
 </div>
 
 <div id="MeldenDiv">
+<form action="" method="post">
     <a href="../IncidentenInfo">
         <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
     <button id="MeldenBtn"> MELDEN </button></a>
