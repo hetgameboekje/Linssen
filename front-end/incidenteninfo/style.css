@@ -73,6 +73,25 @@ body {
     background-color: #A90505;
 }
 
+#VerzendenBtn {
+    position: absolute;
+    left: 50%;
+    top: 81.5%;
+    transform: translate(-50%); 
+
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    background-color: #217E00;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 230px;
+    height: 40px;
+}
+
 #AnnulerenBtn {
     position: absolute;
     left: 50%;
@@ -95,11 +114,10 @@ body {
 #InfoBox {
     position: absolute;
     left: 50%;
-    top: 40%;
-    transform: translate(-50%);
+    transform: translate(-50%, 45%);
 
     width: clamp(240px, 50%, 700px);
-    height: clamp(280px, 50%, 500px);
+    height: clamp(240px, 50%, 500px);
 
     background-color: #0000003f;
     border: none;

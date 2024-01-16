@@ -10,8 +10,6 @@
 </head>
 <body>
 
-
-
 <div id="Layout">
     <header>
         <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
@@ -30,7 +28,12 @@
 
 <div class="OngevalDiv"><textarea name="Infobox" id="InfoBox" placeholder="Verdere relevante informatie..."></textarea></div>
 
-<a href="../PanicButton"><button id="AnnulerenBtn">ANNULEREN</button></a>
+<a><button id="VerzendenBtn">VERZENDEN</button></a>
+
+<a href="#" onclick="AnnulerenConfirm()"><button id="AnnulerenBtn">ANNULEREN</button></a>
     
 </body>
+
+<script src="annuleren.js"></script>
+
 </html>
