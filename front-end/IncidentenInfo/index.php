@@ -12,7 +12,7 @@
 
 <div id="Layout">
     <header>
-        <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+        <a href="../PanicButton"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
     </header>
     <!-- php include header -->
 
