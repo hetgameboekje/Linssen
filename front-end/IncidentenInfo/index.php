@@ -17,7 +17,7 @@
     <!-- php include header -->
 
     <footer>
-        <a href="../LoginRegister/Login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="/front-end/LoginRegister/login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
     <!-- php include footer -->
 </div>
