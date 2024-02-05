@@ -1,45 +1,3 @@
-body {
-    background-color: #1A2741;
-    border: 15px solid #122241;
-    margin: 0px;
-    height: 100vh;
-
-    scrollbar-width: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-/*Layout*/
-
-#LinssenLogo {
-    width: clamp(50px, 20%, 80px);
-    border-radius: 100%;
-    
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    
-}
-
-#UserBtn {
-    position: absolute;
-    left: 50%;
-    top: 97.5%;
-    transform: translate(-50%);
-
-    background-color: #122241;
-    border: 0px;
-
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-
-    width: clamp(100px, 50%, 150px);
-    height: clamp(30px, 50%, 45px);
-}
-
 /*Ongevals Buttons*/
 
 .OngevalDiv {
@@ -49,7 +7,7 @@ body {
     flex-direction: column;
 
     position: relative;
-    top: 5%;
+    top: 6%;
     margin-top: 25px;
 }
 
@@ -114,7 +72,7 @@ body {
 #InfoBox {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 45%);
+    transform: translate(-50%, 50%);
 
     width: clamp(240px, 50%, 700px);
     height: clamp(240px, 50%, 500px);
