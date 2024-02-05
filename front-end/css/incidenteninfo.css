@@ -72,7 +72,7 @@
 #InfoBox {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 45%);
 
     width: clamp(240px, 50%, 700px);
     height: clamp(240px, 50%, 500px);
