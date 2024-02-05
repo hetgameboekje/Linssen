@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../css/main.css">
 
 </head>
 <body>
 
 <div id="Layout">
-    <img src="/front-end/Images/LinssenBlue.jpeg" id="LinssenLogo">
+    <header>
+        <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+    </header>
 
-
+    <footer>
+        <a href="../LoginRegister/Login.php"><button id="UserBtn"> LOGIN </button></a>
+    </footer>
 </div>
 
 <div class="login">

@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Home</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/home.css">
 
 </head>
 <body>
 
 <div id="Layout">
     <header>
-        <a href="../PanicButton"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
+        <a href="../php/home.php"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
     </header>
 
     <footer>
@@ -22,7 +23,7 @@
 
 <div id="MeldenDiv">
 <form action="/backend/panicPress/panicPress.php" method="post">
-    <a href="../IncidentenInfo">
+    <a href="../php/IncidentenInfo.php">
         <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
     <button id="MeldenBtn"> MELDEN </button></a>
 </div>
