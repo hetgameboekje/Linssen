@@ -13,23 +13,20 @@
 
 <div id="Layout">
     <header>
-        <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+        <a href="../php/home.php"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
     </header>
 
     <footer>
-        <a href="../LoginRegister/Login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="/front-end/LoginRegister/login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
 </div>
 
-<div class="login">
-    <label for="chk" aria-hidden="true">Login</label>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit" name="submit" value="submit" class="button">Login</button>
+<div id="Login">
+    <input class="LoginButtons" type="text" placeholder="VOOR- / ACHTERNAAM" required>
+    <input class="LoginButtons" type="password" placeholder="WACHTWOORD" required>
+    <button class="LoginButtons" id="LoginBtn" type="submit" value="submit"> LOGIN </button>
+    <button class="LoginButtons" id="RegisterBtn" type="submit" value="submit"> REGISTER </button>
 </div>
-
-
-
 
 </body>
 </html>
