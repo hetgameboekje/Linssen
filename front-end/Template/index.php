@@ -12,15 +12,13 @@
 
 <div id="Layout">
     <header>
-        <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
+        <a href="../php/home.php"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
     </header>
 
     <footer>
-        <a href="../php/Login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="/front-end/LoginRegister/login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
 </div>
-
-
     
 </body>
 </html>
