@@ -30,12 +30,12 @@
 
 <div class="OngevalDiv"><textarea name="Infobox" id="InfoBox" placeholder="Verdere relevante informatie..."></textarea></div>
 
-<a><button id="VerzendenBtn">VERZENDEN</button></a>
+<a href="#" onclick="VerzendenConfirm()"><button id="VerzendenBtn">VERZENDEN</button></a>
 
 <a href="#" onclick="AnnulerenConfirm()"><button id="AnnulerenBtn">ANNULEREN</button></a>
     
 </body>
 
-<script src="annuleren.js"></script>
+<script src="../js/annuleren.js"></script>
 
 </html>

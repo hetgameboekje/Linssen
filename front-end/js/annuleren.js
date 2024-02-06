@@ -21,6 +21,6 @@ function AnnulerenConfirm() {
 // create a function when pressed it adds to a variable
 // when button_press > 1 run function script
 
-function VerzendenConfrim() {
+function VerzendenConfirm() {
     document.getElementById("VerzendenBtn").textContent = "VERZONDEN"
 }
