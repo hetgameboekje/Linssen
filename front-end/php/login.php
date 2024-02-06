@@ -6,6 +6,7 @@
     <title>Login</title>
 
 <link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/login.css">
 
 </head>
 <body>
@@ -21,13 +22,10 @@
 </div>
 
 <div class="login">
-    <form action="/backend/LoginRegister/login.php" method="post">
-        <label for="chk" aria-hidden="true">Login</label>
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit" name="submit" value="submit" class="button">Login</button>        
-    
-    </form>
+    <label for="chk" aria-hidden="true">Login</label>
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" name="submit" value="submit" class="button">Login</button>
 </div>
 
 
