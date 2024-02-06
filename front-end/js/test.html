@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Location Example</title>
+</head>
+
+<body>
+    <h1>GPS Location Example</h1>
+    <p>Latitude: <span id="latitude"></span></p>
+    <p>Longitude: <span id="longitude"></span></p>
+    <button onclick="getGPSLocation()">Get GPS Location</button>
+    <button onclick="checkLocationWithinBounds(longitude , latitude)">check</button>
+
+    <script>
+        function getGPSLocation() {
+            // Check if the browser supports Geolocation
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+
+                        // Update the HTML elements with the obtained coordinates
+                        document.getElementById("latitude").innerText = latitude;
+                        document.getElementById("longitude").innerText = longitude;
+
+                        // Create a JSON object with the coordinates
+                        var locationData = {
+                            latitude: latitude,
+                            longitude: longitude
+                        };
+
+                        // Send the location data to the backend
+                        sendLocationData(locationData);
+                    },
+                    function (error) {
+                        console.error("Error getting location:", error.message);
+                    },
+                    { enableHighAccuracy: true } // Request higher accuracy
+                );
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        }
+
+        function sendLocationData(locationData) {
+            // Send the location data to the backend using fetch
+            fetch('backend.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(locationData),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Location data sent successfully:', data);
+                })
+                .catch(error => {
+                    console.error('Error sending location data:', error);
+                });
+        }
+        function checkLocationWithinBounds(longitude, latitude) {
+    // Define the boundaries of the "home" location
+    var homeLonMin = 5.716272;
+    var homeLonMax = 5.718910;
+
+    // Check if longitude is within the boundaries
+    // && longitude <= homeLonMax
+    if (longitude >= homeLonMin ) {
+        console.log("Longitude is within bounds."); // Print message if within bounds
+        alert("good");
+    } else {
+        console.log("Longitude is not within bounds."); // Print message if outside bounds
+        alert("bad");
+    }
+}
+        // https://www.google.com/maps/place/50%C2%B050'45.9%22N+5%C2%B043'08.1%22E/@50.896083,5.7176325,18z/data=!3m1!4b1!4m4!3m3!8m2!3d50.846083!4d5.71892?entry=ttu
+        // Example usage:
+
+    </script>
+</body>
+
+</html>

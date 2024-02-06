@@ -24,7 +24,6 @@
 </div>
 
 
-
 <a class="OngevalDiv"><button class="OngevalBtn" id="ZOBtn">ZWAAR ONGEVAL</button></a>
 
 <a class="OngevalDiv"><button class="OngevalBtn" id="OBtn">ONGEVAL</button></a>
