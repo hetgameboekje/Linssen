@@ -14,7 +14,7 @@
 <!-- php include header -->
 
 <div class="register">
-    <form action="../../backend/LoginRegister/register.php" method="post">
+    <form action="../../backend/php/register.php" method="post">
         <label for="chk" aria-hidden="true">Register</label>
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>

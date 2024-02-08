@@ -25,10 +25,14 @@
 
 #ZOBtn {
     background-color: #730000;
+} #ZOBtn:active {
+    border: 2px white solid;
 }
 
 #OBtn {
     background-color: #A90505;
+} #OBtn:active {
+    border: 2px white solid;
 }
 
 #VerzendenBtn {
