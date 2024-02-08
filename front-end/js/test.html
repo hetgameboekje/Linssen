@@ -83,44 +83,52 @@
         }
 
         function checkLocationWithinBounds() {
-            // Retrieve latitude and longitude from the input fields
-            var latitude = parseFloat(document.getElementById("latitudeInput").value);
-            var longitude = parseFloat(document.getElementById("longitudeInput").value);
+    // Retrieve latitude and longitude from the input fields
+    var latitude = parseFloat(document.getElementById("latitudeInput").value);
+    var longitude = parseFloat(document.getElementById("longitudeInput").value);
 
-            // Define the boundaries of the "school" location
-            var schoolLonMin = 5.711720; // minimum coords (top)
-            var schoolLonMax = 5.714778; // maximum coords (bottom)
-            var schoolLatMin = 50.849948; // minimum coords (left)
-            var schoolLatMax = 50.848729; // maximum coords (right)
+    // Define the boundaries of various locations
+    var locations = [
+        {
+            name: "school",
+            lonMin: 5.711720,
+            lonMax: 5.714778,
+            latMin: 50.849948,
+            latMax: 50.848729
+        },
+        {
+            name: "albertheijn",
+            lonMin: 5.711314,
+            lonMax: 5.714825,
+            latMin: 50.849869,
+            latMax: 50.848701
+        },
+        // Add more locations here as needed
+        // {
+        //     name: "locationName",
+        //     lonMin: minLongitude,
+        //     lonMax: maxLongitude,
+        //     latMin: minLatitude,
+        //     latMax: maxLatitude
+        // }
+    ];
 
-            // Define the boundaries of the "albertheijn" location
-            var appieLonMin = 5.711314;
-            var appieLonMax = 5.714825;
-            var appieLatMin = 50.849869;
-            var appieLatMax = 50.848701;
-
-            // Check if latitude and longitude are within the boundaries of the "school" location
-            if (latitude && longitude &&
-                latitude >= schoolLatMin && latitude <= schoolLatMax &&
-                longitude >= schoolLonMin && longitude <= schoolLonMax) {
-                console.log("Location is within school bounds.");
-                alert("school");
-            }
-            // Check if latitude and longitude are within the boundaries of the "albertheijn" location
-            else if (latitude && longitude &&
-                latitude >= appieLatMin && latitude <= appieLatMax &&
-                longitude >= appieLonMin && longitude <= appieLonMax) {
-                console.log("Location is within albertheijn bounds.");
-                alert("albertheijn");
-            }
-            // If the location is not within any defined bounds
-            else {
-                console.log("Location is out of bounds or invalid input.");
-                alert("out of bounds");
-            }
+    // Check if latitude and longitude are within the boundaries of any location
+    for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        if (latitude && longitude &&
+            latitude >= location.latMin && latitude <= location.latMax &&
+            longitude >= location.lonMin && longitude <= location.lonMax) {
+            console.log("Location is within " + location.name + " bounds.");
+            alert(location.name);
+            return; // Exit the function after finding the location
         }
+    }
 
+    // If the location is not within any defined bounds
+    console.log("Location is out of bounds or invalid input.");
+    alert("out of bounds");
+}
     </script>
 </body>
-
 </html>
