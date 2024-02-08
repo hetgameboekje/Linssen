@@ -22,9 +22,9 @@
 </div>
 
 <div id="Login">
-<form action="../backend/php/login.php" method="post">
-    <input class="LoginButtons" type="text" placeholder="VOOR- / ACHTERNAAM" required>
-    <input class="LoginButtons" type="password" placeholder="WACHTWOORD" required>
+<form method="post" action="../../backend/php/login.php">
+    <input class="LoginButtons" type="text" name="username" placeholder="VOOR- / ACHTERNAAM" required>
+    <input class="LoginButtons" type="text" name="password" placeholder="WACHTWOORD" required>
     <button class="LoginButtons" id="LoginBtn" type="submit" value="submit"> LOGIN </button>
     <button class="LoginButtons" id="RegisterBtn" type="submit" value="submit"> REGISTER </button>
 </form>
