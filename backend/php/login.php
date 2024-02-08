@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $username;
 
         // Redirect to a dashboard or home page
-        header("Location: ../../front-end/PanicButton/index.php");
+        header("Location: ../../front-end/php/home.php");
         exit();
     } else {
         // Invalid username or password

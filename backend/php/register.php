@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
         echo "Registration successful!";
         // Redirect to a dashboard or home page
-        header("Location: ../../front-end/PanicButton/index.php");
+        header("Location: ../../front-end/php/home.php");
         exit();        
 
     } else {
