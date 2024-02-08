@@ -21,14 +21,13 @@
     </footer>
 </div>
 
-<div id="Login">
-<form method="post" action="../../backend/php/login.php">
-    <input class="LoginButtons" type="text" name="username" placeholder="VOOR- / ACHTERNAAM" required>
-    <input class="LoginButtons" type="text" name="password" placeholder="WACHTWOORD" required>
-    <button class="LoginButtons" id="LoginBtn" type="submit" value="submit"> LOGIN </button>
-    <button class="LoginButtons" id="RegisterBtn" type="submit" value="submit"> REGISTER </button>
-</form>
-    
+<div>
+    <form id="LoginForm" method="post" action="../../backend/php/login.php">
+        <input class="LoginButtons" type="text" name="username" placeholder="VOOR- / ACHTERNAAM" required>
+        <input class="LoginButtons" type="text" name="password" placeholder="WACHTWOORD" required>
+        <button class="LoginButtons" id="LoginBtn" type="submit" value="submit"> LOGIN </button>
+        <button class="LoginButtons" id="RegisterBtn" type="submit" value="submit"> REGISTER </button>
+    </form>   
 </div>
 
 </body>
