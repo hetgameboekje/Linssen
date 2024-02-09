@@ -21,9 +21,9 @@
 </div>
 
 <div id="MeldenDiv">
-    <button id="MeldenBtn" onclick="gps_location()">
+    <a href="./incidenteninfo.php"><button id="MeldenBtn" onclick="gps_location()">
             <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
-             MELDEN </button>
+             MELDEN </button></a>
 </div>
 
 <!-- Display latitude and longitude -->
