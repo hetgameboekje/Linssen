@@ -2,7 +2,7 @@
 session_start();
 
 // Include the database configuration or connect to your database
-include "../../backend/Database/DB_connect.php";
+include "../Database/DB_connect.php";
 
 // Function to handle user login
 function handle_login($conn) {
@@ -13,7 +13,7 @@ function handle_login($conn) {
         $password = mysqli_real_escape_string($conn, $_POST['password']);
 
         // Prepare and execute a statement to retrieve the hashed password from the database
-        $stmt = $conn->prepare("SELECT username, password FROM users WHERE username = ?");
+        $stmt = $conn->prepare("SELECT username, password FROM admin_login WHERE username = ?");
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $stmt->bind_result($dbUsername, $dbPassword);
