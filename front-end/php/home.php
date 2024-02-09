@@ -21,7 +21,7 @@ require "../../backend/php/session_manager.php";
     </header>
 
     <footer>
-        <a href="/front-end/php/login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="/front-end/php/login.php"><button id="UserBtn"> <?php echo $_SESSION["login"];?> </button></a>
     </footer>
 </div>
 
