@@ -32,7 +32,7 @@ function gps_location () {
 
 function sendLocationData(locationData) {
     // Send the location data to your backend using fetch or another method
-    fetch('./test.php', {
+    fetch('./save_location.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
