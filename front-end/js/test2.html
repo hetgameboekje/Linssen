@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Get User Location</title>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(saveLocationAndNavigate);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function saveLocationAndNavigate(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Send the coordinates to your backend server
+            var xhr = new XMLHttpRequest();
+            var url = '../../backend/gps.php'; // Replace with your backend endpoint
+            xhr.open('POST', url);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Successfully saved location, now navigate to the next page
+                        window.location.href = './test.html'; // Replace with your next page URL
+                    } else {
+                        // Handle error
+                        console.error('Error saving location:', xhr.status);
+                    }
+                }
+            };
+            var data = JSON.stringify({ latitude: latitude, longitude: longitude });
+            xhr.send(data);
+        }
+    </script>
 </head>
 <body>
-    
-  <iframe
-  width="450"
-  height="250"
-  frameborder="0" style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/view
-  ?key=AIzaSyAnTc2I9O60Oz95qB7ExlSlgWf3tIvN02o
-  &center=-33.8569,151.2152
-  &zoom=18
-  &maptype=satellite"
-  allowfullscreen>
-</iframe>
-
+    <button onclick="getLocation();" id="myButton" class="float-left submit-button">Get Location and Proceed</button>
 </body>
 </html>
-
-https://www.google.com/maps/embed/v1/view
-  ?key=AIzaSyAnTc2I9O60Oz95qB7ExlSlgWf3tIvN02o
-  &center=-33.8569,151.2152
-  &zoom=18
-  &maptype=satellite
