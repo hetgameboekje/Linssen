@@ -28,6 +28,7 @@ function gps_location () {
     } else {
         alert("Geolocation is not supported by your browser.");
     }
+    window.location.href = '../../front-end/php/incidenteninfo.php';
 }
 
 function sendLocationData(locationData) {
