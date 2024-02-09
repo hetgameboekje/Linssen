@@ -29,4 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Username or Password is invalid";
     }
 }
+
+$_SESSION["login"]= $username ;
+$_SESSION["permission"] = 1;
 ?>
