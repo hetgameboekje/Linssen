@@ -20,12 +20,9 @@
 </div>
 
 <div id="MeldenDiv">
-    <form action="/backend/panicPress/panicPress.php" method="post">
     <button id="MeldenBtn" onclick="gps_location()">
             <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
              MELDEN </button>
-        
-    </form>
 </div>
 
 <!-- Display latitude and longitude -->
