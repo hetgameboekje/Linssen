@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 function session($login, $permission) {
     // Check if the user is logged in
     if (!$login) {
@@ -28,4 +27,4 @@ function session($login, $permission) {
 
 // Example usage:
 // Assume $login and $permission are defined elsewhere in your code
-session($login, $permission);
+session($_SESSION["login"], $_SESSION["permission"]);
