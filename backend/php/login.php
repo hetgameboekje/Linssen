@@ -23,13 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if the username and password match
     if (mysqli_num_rows($result) == 1) {
-        $_SESSION['login_user'] = $username; // Initializing Session
+         // Initializing Session
+        $_SESSION["login"]= $username ;
+        $_SESSION["permission"] = 1;
         header("location: ../../front-end/php/home.php"); // Redirecting To Admin Panel
     } else {
         $error = "Username or Password is invalid";
     }
 }
 
-$_SESSION["login"]= $username ;
-$_SESSION["permission"] = 1;
+
 ?>
