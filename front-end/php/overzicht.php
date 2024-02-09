@@ -38,7 +38,7 @@ for ($x = 0; $x <= 10; $x++) {
 
 
         <footer>
-            <a href="../php/login.php"><button id="UserBtn"> LOGIN </button></a>
+            <a href="../php/login.php"><button id="UserBtn"> <?php echo $_SESSION["login"];?> </button></a>
         </footer>
     </div>
 
