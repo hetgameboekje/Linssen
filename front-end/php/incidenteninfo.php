@@ -30,7 +30,7 @@
 
 <div class="OngevalDiv"><textarea name="Infobox" id="InfoBox" placeholder="Verdere relevante informatie..."></textarea></div>
 
-<a href="#" onclick="VerzendenConfirm()"><button id="VerzendenBtn">VERZENDEN</button></a>
+<a href="./overzicht.php" onclick="VerzendenConfirm()"><button id="VerzendenBtn">VERZENDEN</button></a>
 
 <a href="#" onclick="AnnulerenConfirm()"><button id="AnnulerenBtn">ANNULEREN</button></a>
     

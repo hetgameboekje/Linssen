@@ -22,5 +22,7 @@ function AnnulerenConfirm() {
 // when button_press > 1 run function script
 
 function VerzendenConfirm() {
-    document.getElementById("VerzendenBtn").textContent = "VERZONDEN"
+    document.getElementById("VerzendenBtn").textContent = "VERZONDEN";
+    window.location.href = "./overzicht.html";
+
 }

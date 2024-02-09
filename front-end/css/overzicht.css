@@ -11,7 +11,33 @@
 
     margin-bottom: 5px;
 }
-.urgentie{
+.loginGreen {
+    background-color: #47a637;
+    border: 1px black solid;
+    border-radius: 5%;
+    padding: 7.5px;
+
+    width: 200px;
+
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+.urgent{
+    background-color: #c35757;
+    border: 1px black solid;
+    border-radius: 5%;
+    padding: 7.5px;
+
+    width: 100px;
+
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+.hoogurgent{
     background-color: #641c1c;
     border: 1px black solid;
     border-radius: 5%;
@@ -25,7 +51,7 @@
     margin-bottom: 5px;
 }
 
-.status {
+.statushandeld {
     width : 4px;
     background-color: #16ff12;
     position: relative;
@@ -37,5 +63,19 @@
     color: rgb(255, 255, 255);
     font-weight: bold;
     margin-bottom: 5px;
-    height: 30px;
+    /* height: 30px; */
+}
+.statusactive {
+    width : 4px;
+    background-color: #394A64;
+    position: relative;
+    float:left;
+    left: 14px;
+    border: 1px black solid;
+    border-radius: 5%;
+    padding: 7.5px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* height: 30px; */
 }
