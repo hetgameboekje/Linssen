@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/login.css">
+
 </head>
 <body>
 
 <div id="Layout">
-    <img src="../Images/LinssenBlue.jpeg" id="LinssenLogo">
-</div>
-<!-- php include header -->
+    <header>
+        <a href="../php/home.php"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
+    </header>
 
-<div class="register">
-    <form action="../../backend/php/register.php" method="post">
-        <label for="chk" aria-hidden="true">Register</label>
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-        <button type="submit" name="submit" value="submit" class="button">Register</button>
-    </form>
+    <footer>
+        <a href="../php/login.php"><button id="UserBtn"> LOGIN </button></a>
+    </footer>
+</div>
+<div id="">
+    <form id="LoginForm" method="post" action="../../backend/php/login.php">
+        <input class="LoginButtons" type="text" name="username" placeholder="VOOR- / ACHTERNAAM" required>
+        <input class="LoginButtons" type="password" name="password" placeholder="WACHTWOORD" required>
+        <input class="LoginButtons" type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <button class="LoginButtons" id="LoginBtn" type="submit" value="submit"> REGISTER </button>
+
+    </form>   
+    <a href="./login.php"><button class="LoginButtons" class="center"> LOGIN </button></a>
 </div>
 
 </body>

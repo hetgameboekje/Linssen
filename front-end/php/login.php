@@ -17,7 +17,7 @@
     </header>
 
     <footer>
-        <a href="../front-end/php/login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="../php/login.php"><button id="UserBtn"> LOGIN </button></a>
     </footer>
 </div>
 
@@ -26,8 +26,9 @@
         <input class="LoginButtons" type="text" name="username" placeholder="VOOR- / ACHTERNAAM" required>
         <input class="LoginButtons" type="text" name="password" placeholder="WACHTWOORD" required>
         <button class="LoginButtons" id="LoginBtn" type="submit" value="submit"> LOGIN </button>
-        <button class="LoginButtons" id="RegisterBtn" type="submit" value="submit"> REGISTER </button>
+
     </form>   
+    <a href="./register.php"><button class="LoginButtons" id="RegisterBtn"> REGISTER </button></a>
 </div>
 
 </body>
