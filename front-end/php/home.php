@@ -23,7 +23,7 @@
 
 <div id="MeldenDiv">
 <form action="/backend/panicPress/panicPress.php" method="post">
-    <a href="../php/IncidentenInfo.php">
+    <a href="../php/incidenteninfo.php">
         <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
     <button id="MeldenBtn"> MELDEN </button></a>
 </div>
