@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Return success response
         echo json_encode(['success' => true]);
+        header("Location: ../../front-end/php/incidenteninfo.php");
     } else {
         // Return error response if latitude or longitude is missing
         echo json_encode(['error' => 'Latitude or longitude missing']);
