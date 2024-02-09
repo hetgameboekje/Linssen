@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['latitude'] = $data['latitude'];
         $_SESSION['longitude'] = $data['longitude'];
 
-        // Return success response
-        echo json_encode(['success' => true]);
+        // Redirect to incidenteninfo.php
         header("Location: ../../front-end/php/incidenteninfo.php");
+        exit; // Make sure to exit after redirection to prevent further execution
     } else {
         // Return error response if latitude or longitude is missing
         echo json_encode(['error' => 'Latitude or longitude missing']);
