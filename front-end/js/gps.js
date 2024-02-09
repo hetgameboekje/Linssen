@@ -47,6 +47,8 @@ function sendLocationData(locationData) {
     })
     .then(data => {
         console.log('Location data sent successfully:', data);
+        // Redirect the user to the desired page upon successful data submission
+        window.location.href = '../../front-end/php/incidenteninfo.php';
     })
     .catch(error => {
         console.error('Error sending location data:', error);
