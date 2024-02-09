@@ -1,44 +1,32 @@
 <?php
-session_start();
-
-// Include the database configuration or connect to your database
+// Include the database connection
 include "../Database/DB_connect.php";
 
-// Function to handle user login
-function handle_login($conn) {
-    // Check if the form is submitted
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Get user input (sanitize to prevent SQL injection)
-        $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
+// Start the session
+session_start();
 
-        // Prepare and execute a statement to retrieve the hashed password from the database
-        $stmt = $conn->prepare("SELECT username, password FROM admin_login WHERE username = ?");
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $stmt->bind_result($dbUsername, $dbPassword);
-        $stmt->fetch();
-        $stmt->close();
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-        // Verify the password
-        if ($dbUsername && password_verify($password, $dbPassword)) {
-            // Password is correct, start a session
-            $_SESSION['username'] = $username;
+    // SQL injection prevention
+    $username = stripslashes($username);
+    $password = stripslashes($password);
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = mysqli_real_escape_string($conn, $password);
 
-            // Redirect to a dashboard or home page
-            header("Location: ../../front-end/PanicButton/index.php");
-            exit();
-        } else {
-            // Invalid username or password, redirect back to login page with error message
-            header("Location: login.php?error=1");
-            exit();
-        }
+    // Query to fetch admin credentials
+    $query = "SELECT * FROM admin_login WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+
+    // Check if the username and password match
+    if (mysqli_num_rows($result) == 1) {
+        $_SESSION['login_user'] = $username; // Initializing Session
+        header("location: admin_panel.php"); // Redirecting To Admin Panel
+    } else {
+        $error = "Username or Password is invalid";
     }
 }
-
-// Call the function to handle login
-handle_login($conn);
-
-// Close the database connection
-$conn->close();
 ?>
