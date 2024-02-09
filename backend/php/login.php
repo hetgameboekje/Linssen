@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the username and password match
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['login_user'] = $username; // Initializing Session
-        header("location: admin_panel.php"); // Redirecting To Admin Panel
+        header("location: ../../front-end/php/home.php"); // Redirecting To Admin Panel
     } else {
         $error = "Username or Password is invalid";
     }
