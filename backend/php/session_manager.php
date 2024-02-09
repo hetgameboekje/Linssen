@@ -11,12 +11,10 @@ function session($login, $permission) {
         // If logged in, check permissions
         if ($permission == 0) {
             // If permission is 0, don't include the page
-            echo "You don't have permission to access this page.";
             exit(); // Stop further execution
         } else if ($permission == 1) {
             // If permission is 1, include the page
             // You can include the page content here
-            echo "Page content goes here.";
         } else {
             // Handle other permission levels if needed
             echo "Unknown permission level.";
