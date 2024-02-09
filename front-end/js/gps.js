@@ -1,5 +1,6 @@
 function gps_location () {
     // Check if the browser supports Geolocation
+    alert("test");
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
