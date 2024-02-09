@@ -1,3 +1,6 @@
+<?php 
+require "../../backend/php/session_manager.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@
     <!-- php include header -->
 
     <footer>
-        <a href="../php/login.php"><button id="UserBtn"> LOGIN </button></a>
+        <a href="../php/login.php"><button id="UserBtn"> <?php echo $_SESSION["login"];?> </button></a>
     </footer>
     <!-- php include footer -->
 </div>

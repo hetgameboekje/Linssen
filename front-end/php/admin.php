@@ -1,3 +1,6 @@
+<?php 
+require "../../backend/php/session_manager.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
