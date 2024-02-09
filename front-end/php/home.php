@@ -1,3 +1,4 @@
+<?php require "../../backend/php/session_manager.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +27,7 @@
 </div>
 
 <!-- Display latitude and longitude -->
-Latitude: <span id="latitude"></span><br>
-Longitude: <span id="longitude"></span>
+
 
 <script>
     function gps_location() {
