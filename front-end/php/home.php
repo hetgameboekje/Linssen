@@ -21,10 +21,10 @@
 
 <div id="MeldenDiv">
     <form action="/backend/panicPress/panicPress.php" method="post">
-        <a href="../php/incidenteninfo.php">
+    <button id="MeldenBtn" onclick="gps_location()">
             <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
-            <button id="MeldenBtn" onclick="gps_location()"> MELDEN </button>
-        </a>
+             MELDEN </button>
+        
     </form>
 </div>
 
@@ -52,6 +52,9 @@ Longitude: <span id="longitude"></span>
 
                     // Send the location data to your backend
                     sendLocationData(locationData);
+
+                    // Redirect the user to the desired page
+                    window.location.href = "../php/incidenteninfo.php";
                 }, 
                 function(error) {
                     console.error("Error getting location:", error.message);
