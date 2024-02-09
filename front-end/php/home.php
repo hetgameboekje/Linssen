@@ -26,7 +26,7 @@
 
     <div id="MeldenDiv">
     <button id="MeldenBtn" onclick="e()">
-        <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
+        <!-- <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent"> -->
         MELDEN
     </button>
 </div>
