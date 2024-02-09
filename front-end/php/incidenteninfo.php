@@ -40,5 +40,6 @@ require "../../backend/php/session_manager.php";
 </body>
 
 <script src="../js/annuleren.js"></script>
+<script scr="../js/gps.js"></script>
 
 </html>
