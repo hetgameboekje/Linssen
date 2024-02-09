@@ -15,6 +15,17 @@
     <header>
         <a href="../php/home.php"><img src="../Images/LinssenBlue.jpeg" id="LinssenLogo"></a>
     </header>
+    <a href="./home.php"><button class="LoginButtons"> Terug </button></a>
+    <h2> MEEST RECENTE MELDING </h2>
+    <a href="./home.php"><button class="status"></button><button class="LoginButtons"> Placeholder | <?php echo date("Y/m/d") ?>  </button><button class="urgentie">Hoog urgent</button></a>
+
+
+
+
+
+
+
+
 
     <footer>
         <a href="../php/login.php"><button id="UserBtn"> LOGIN </button></a>
