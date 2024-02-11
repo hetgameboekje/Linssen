@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Coordinates</title>
+</head>
+<body>
+    <h1>Coordinates</h1>
+    <p id="coordinates"></p>
+
+    <script>
+        // Function to retrieve the value of a cookie
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        // Retrieve latitude and longitude from cookies
+        const latitude = getCookie('latitude');
+        const longitude = getCookie('longitude');
+
+        // Display coordinates
+        if (latitude && longitude) {
+            document.getElementById('coordinates').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        } else {
+            document.getElementById('coordinates').innerText = 'Coordinates not found.';
+        }
+    </script>
+</body>
+</html>
