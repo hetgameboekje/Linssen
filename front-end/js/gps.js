@@ -1,22 +1,22 @@
 function gps_location() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
-            function(position) {
+            function (position) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
                 console.log("Latitude:", latitude);
                 console.log("Longitude:", longitude);
-                
+
                 // Set cookies for latitude and longitude with expiration time
                 var expires = new Date();
                 expires.setTime(expires.getTime() + (3 * 60 * 60 * 1000)); // 3 hours
                 document.cookie = `latitude=${latitude}; expires=${expires.toUTCString()}`;
                 document.cookie = `longitude=${longitude}; expires=${expires.toUTCString()}`;
-                
-                // Redirect to PHP script
-                //window.location.href = "../../backend/php/melding.php";
+
+                // Check if the latitude and longitude cookies exist
+                window.location.href = "../../backend/php/melding.php";
             },
-            function(error) {
+            function (error) {
                 console.error("Error getting location:", error.message);
             }
         );
@@ -24,6 +24,33 @@ function gps_location() {
         alert("Geolocation is not supported by your browser.");
     }
 }
+
+
+function gps_location2() {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                console.log("Latitude:", latitude);
+                console.log("Longitude:", longitude);
+
+
+
+
+                // Check if the latitude and longitude cookies exist
+                window.location.href = "../../backend/php/save_coord.php?latitude=" + latitude + "&longitude=" + longitude;
+            },
+            function (error) {
+                console.error("Error getting location:", error.message);
+            }
+        );
+    } else {
+        alert("Geolocation is not supported by your browser.");
+    }
+}
+
+
 
 // function e() {
 //     if ("geolocation" in navigator) {

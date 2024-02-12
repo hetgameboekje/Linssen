@@ -25,7 +25,7 @@
     </div>
 
     <div id="MeldenDiv">
-    <button id="MeldenBtn" onclick="gps_location()">
+    <button id="MeldenBtn" onclick="gps_location2()">
         <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
         MELDEN
     </button>
