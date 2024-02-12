@@ -8,9 +8,9 @@
 </head>
 
 <body>
-    <button onclick="simulateMouseClick()">Simulate Mouse Click</button>
+    <button onclick="gps_location()">Simulate Mouse Click</button>
     <script>
-        function simulateMouseClick() {
+        function gps_location() {
         if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             function(position) {

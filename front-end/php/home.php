@@ -25,8 +25,8 @@
     </div>
 
     <div id="MeldenDiv">
-    <button id="MeldenBtn" onclick="e()">
-        <!-- <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent"> -->
+    <button id="MeldenBtn" onclick="gps_location()">
+        <img src="../Images/MeldenBtnAccent.png" id="MeldenBtnAccent">
         MELDEN
     </button>
 </div>
@@ -39,5 +39,5 @@
 
 
 </body>
-
+<script src="../js/gps.js"></script>
 </html>
