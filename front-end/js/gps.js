@@ -39,7 +39,7 @@ function gps_location2() {
 
 
                 // Check if the latitude and longitude cookies exist
-                window.location.href = "../../backend/php/save_coord.php?latitude=" + latitude + "&longitude=" + longitude;
+                window.location.href = "../../backend/php/melding.php?latitude=" + latitude + "&longitude=" + longitude;
             },
             function (error) {
                 console.error("Error getting location:", error.message);

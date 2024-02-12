@@ -20,12 +20,12 @@ else {
 
 printf("<br>" . $melding_spoed_uuid . "<br>" .  $tijd_melding . "<br>" .  $gebruikersnaam . "<br>" .  $latitude . "<br>" .  $longitude );
 
-//$sql = "INSERT INTO `tb_melding_spoed`(`melding_spoed_uuid`, `tijd_melding`, `gebruikersnaam`, `longitude`, `latitude`) VALUES ('$melding_spoed_uuid','$tijd_melding','$gebruikersnaam','$longitude','$latitude')";
+$sql = "INSERT INTO `tb_melding_spoed`(`melding_spoed_uuid`, `tijd_melding`, `gebruikersnaam`, `longitude`, `latitude`) VALUES ('$melding_spoed_uuid','$tijd_melding','$gebruikersnaam','$longitude','$latitude')";
 
 // Execute the SQL query
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-    //header("Location: ../../front-end/php/incidenteninfo.php");
+    header("Location: ../../front-end/php/incidenteninfo.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
