@@ -22,7 +22,7 @@ $sql = "INSERT INTO `tb_melding_spoed`(`melding_spoed_uuid`, `tijd_melding`, `ge
 // Execute the SQL query
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-    header("Location: ./incidenteninfo.php");
+    header("Location: ../../front-end/php/incidenteninfo.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -26,7 +26,7 @@ require "../../backend/php/session_manager.php";
     <!-- php include footer -->
 </div>
 
-<form action="./incidentenpost.php" method="post">
+<form action="../../backend/php/incidentenpost.php" method="post">
     <div class="OngevalDiv">
         <button class="OngevalBtn" id="ZOBtn" type="button">ZWAAR ONGEVAL</button>
     </div>

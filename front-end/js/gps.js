@@ -14,7 +14,7 @@ function gps_location() {
                 document.cookie = `longitude=${longitude}; expires=${expires.toUTCString()}`;
                 
                 // Redirect to PHP script
-                window.location.href = "./test.php";
+                //window.location.href = "../../backend/php/melding.php";
             },
             function(error) {
                 console.error("Error getting location:", error.message);
