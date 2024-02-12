@@ -22,7 +22,7 @@
                 // Set cookies for latitude and longitude
                 document.cookie = `latitude=${latitude}; expires=`;
                 document.cookie = `longitude=${longitude}; expires=`;
-                window.location.href = "./cookie.html";
+               
             },
             function(error) {
                 console.error("Error getting location:", error.message);
