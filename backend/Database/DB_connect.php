@@ -1,5 +1,5 @@
 <?php
-    $servername = "localhost";
+    $servername = "localhost:3306";
     $username = "timo";
     $password = "root";
     $dbname = "linssen";
@@ -7,6 +7,6 @@
     if($conn->connect_error){
         die("connection failed".$conn->connect_error);
     }
-    echo"";
+    
 ?>  
 

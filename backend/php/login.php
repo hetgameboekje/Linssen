@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($conn, $password);
 
     // Query to fetch admin credentials
-    $query = "SELECT * FROM admin_login WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM tb_gebruiker WHERE gebruikersnaam='$username' AND wachtwoord='$password'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
 

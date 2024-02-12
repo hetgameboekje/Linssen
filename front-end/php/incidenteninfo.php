@@ -26,16 +26,31 @@ require "../../backend/php/session_manager.php";
     <!-- php include footer -->
 </div>
 
+<form action="./incidentenpost.php" method="post">
+    <div class="OngevalDiv">
+        <button class="OngevalBtn" id="ZOBtn" type="button">ZWAAR ONGEVAL</button>
+    </div>
+    <div class="OngevalDiv">
+        <button class="OngevalBtn" id="OBtn" type="button">ONGEVAL</button>
+    </div>
+    <div class="OngevalDiv">
+        <textarea name="Infobox" id="InfoBox" placeholder="Verdere relevante informatie..."></textarea>
+    </div>
+    <input type="hidden" name="ongeval_type" id="ongevalType" value="">
+    <button id="VerzendenBtn" type="submit">VERZENDEN</button>
+    <a href="#" onclick="AnnulerenConfirm()"><button id="AnnulerenBtn" type="button">ANNULEREN</button></a>
+</form>
 
-<a class="OngevalDiv"><button class="OngevalBtn" id="ZOBtn">ZWAAR ONGEVAL</button></a>
+<script>
+    document.getElementById('ZOBtn').addEventListener('click', function() {
+        document.getElementById('ongevalType').value = 'ZWAAR ONGEVAL';
+    });
 
-<a class="OngevalDiv"><button class="OngevalBtn" id="OBtn">ONGEVAL</button></a>
+    document.getElementById('OBtn').addEventListener('click', function() {
+        document.getElementById('ongevalType').value = 'ONGEVAL';
+    });
+</script>
 
-<div class="OngevalDiv"><textarea name="Infobox" id="InfoBox" placeholder="Verdere relevante informatie..."></textarea></div>
-
-<a href="./overzicht.php" onclick="VerzendenConfirm()"><button id="VerzendenBtn">VERZENDEN</button></a>
-
-<a href="#" onclick="AnnulerenConfirm()"><button id="AnnulerenBtn">ANNULEREN</button></a>
     
 </body>
 

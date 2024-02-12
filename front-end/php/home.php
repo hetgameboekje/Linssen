@@ -1,4 +1,4 @@
-<?php // require "../../backend/php/session_manager.php"; ?>
+<?php require "../../backend/php/session_manager.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
