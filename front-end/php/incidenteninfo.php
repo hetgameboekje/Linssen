@@ -43,11 +43,11 @@ require "../../backend/php/session_manager.php";
 
 <script>
     document.getElementById('ZOBtn').addEventListener('click', function() {
-        document.getElementById('ongevalType').value = 'ZWAAR ONGEVAL';
+        document.getElementById('ongevalType').value = 1;
     });
 
     document.getElementById('OBtn').addEventListener('click', function() {
-        document.getElementById('ongevalType').value = 'ONGEVAL';
+        document.getElementById('ongevalType').value = 0;
     });
 </script>
 

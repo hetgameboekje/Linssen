@@ -9,6 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $infobox = $_POST["Infobox"];
         $ongeval_type = $_POST["ongeval_type"];
         $melding_info_uuid = $_SESSION['melding_spoed_uuid'];
+
+
+        
         printf($infobox ."<br>" . $ongeval_type ."<br>" . $melding_info_uuid);
         // Prepare and execute the SQL query
         $sql = "INSERT INTO `tb_melding_info`(`melding_info_uuid`, `type_ongeval`, `bericht`) VALUES (?, ?, ?)";
@@ -28,4 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "<p>No data submitted.</p>";
 }
+
+
 ?>
