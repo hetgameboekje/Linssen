@@ -11,26 +11,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $melding_info_uuid = $_SESSION['melding_spoed_uuid'];
         $status = 0;
 
-        
-        printf($infobox ."<br>" . $ongeval_type ."<br>" . $melding_info_uuid);
         // Prepare and execute the SQL query
-        $sql = "INSERT INTO `tb_melding_info`(`melding_info_uuid`, `type_ongeval`, `bericht` , `status`) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO `tb_melding_info`(`melding_info_uuid`, `type_ongeval`, `bericht`, `status`) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $melding_info_uuid, $ongeval_type, $infobox , $status);
-        if ($stmt->execute()) {
-            echo "New record created successfully";
-            header("Location: ../../front-end/php/overzicht.php");
-            exit(); // Ensure no further output is sent
+        if ($stmt) {
+            $stmt->bind_param("sssi", $melding_info_uuid, $ongeval_type, $infobox, $status);
+            if ($stmt->execute()) {
+                echo "New record created successfully";
+                $stmt->close();
+                header("Location: ../../front-end/php/overzicht.php");
+                exit(); // Ensure no further output is sent
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error in preparing SQL statement: " . $conn->error;
         }
-        $stmt->close();
     } else {
         echo "<p>One or more form fields are empty.</p>";
     }
 } else {
     echo "<p>No data submitted.</p>";
 }
-
-
 ?>
