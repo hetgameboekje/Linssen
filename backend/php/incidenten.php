@@ -1,11 +1,10 @@
 <?php
 require "../../backend/Database/DB_connect.php";
 
-// Query to retrieve information from tb_melding_spoed and tb_melding_info tables
-$query = "SELECT ms.*, mi.type_ongeval 
-          FROM tb_melding_spoed AS ms
-          LEFT JOIN tb_melding_info AS mi ON ms.melding_spoed_uuid = mi.melding_info_uuid";
 
+$query = "SELECT tb_melding_spoed.melding_spoed_uuid, tb_melding_spoed.tijd_melding, tb_melding_spoed.gebruikersnaam, tb_melding_info.melding_info_uuid, tb_melding_info.type_ongeval, tb_melding_info.status 
+FROM tb_melding_spoed
+LEFT JOIN tb_melding_info ON tb_melding_spoed.melding_spoed_uuid = tb_melding_info.melding_info_uuid";
 // Prepare the statement
 $stmt = mysqli_prepare($conn, $query);
 
@@ -13,10 +12,9 @@ $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_execute($stmt);
 
 // Bind result variables
-mysqli_stmt_bind_result($stmt, $melding_spoed_uuid, $gebruikersnaam, $tijd_melding, $status, $melding_info_uuid, $type_ongeval);
+mysqli_stmt_bind_result($stmt, $melding_spoed_uuid, $tijd_melding, $gebruikersnaam, $melding_info_uuid, $type_ongeval, $status);
 
 // Output header
-echo "<header><h1>Melding Details</h1></header>";
 
 // Loop through the result set
 while (mysqli_stmt_fetch($stmt)) {

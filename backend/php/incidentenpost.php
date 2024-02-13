@@ -9,14 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $infobox = $_POST["Infobox"];
         $ongeval_type = $_POST["ongeval_type"];
         $melding_info_uuid = $_SESSION['melding_spoed_uuid'];
-
+        $status = 0;
 
         
         printf($infobox ."<br>" . $ongeval_type ."<br>" . $melding_info_uuid);
         // Prepare and execute the SQL query
-        $sql = "INSERT INTO `tb_melding_info`(`melding_info_uuid`, `type_ongeval`, `bericht`) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO `tb_melding_info`(`melding_info_uuid`, `type_ongeval`, `bericht` , `status`) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $melding_info_uuid, $ongeval_type, $infobox);
+        $stmt->bind_param("sss", $melding_info_uuid, $ongeval_type, $infobox , $status);
         if ($stmt->execute()) {
             echo "New record created successfully";
             header("Location: ../../front-end/php/overzicht.php");
