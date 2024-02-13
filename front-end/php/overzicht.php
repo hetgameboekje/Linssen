@@ -22,6 +22,7 @@ require "../../backend/php/session_manager.php";
         </header>
         <a href="./home.php"><button class="LoginButtons"> Terug </button></a>
         <h2> MEEST RECENTE MELDING </h2>
+        <?php require "../../backend/php/incidenten.php"; ?>
         <footer>
             <a href="../php/login.php"><button id="UserBtn"> <?php echo $_SESSION["login"];?> </button></a>
         </footer>

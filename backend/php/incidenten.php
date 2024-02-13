@@ -1,60 +1,46 @@
 <?php
 require "../../backend/Database/DB_connect.php";
 
-// Query to retrieve information from tb_melding_spoed table only
-$query = "SELECT * FROM tb_melding_spoed";
+// Query to retrieve information from tb_melding_spoed and tb_melding_info tables
+$query = "SELECT ms.*, mi.type_ongeval 
+          FROM tb_melding_spoed AS ms
+          LEFT JOIN tb_melding_info AS mi ON ms.melding_spoed_uuid = mi.melding_info_uuid";
 
-// Executing the query
-$result = mysqli_query($conn, $query);
+// Prepare the statement
+$stmt = mysqli_prepare($conn, $query);
 
-// Checking for SQL errors
-if (!$result) {
-    // Handle SQL error
-    echo "Error: " . mysqli_error($conn);
-} else {
-    // If no SQL error, loop through the result set
-    while ($row = mysqli_fetch_assoc($result)) {
-        // Extracting data
-        $username = $row['gebruikersnaam']; // Assuming the column name is gebruikersnaam
-        $tijd_melding = $row['tijd_melding'];
-        $status = $row['status'];
-        
-        // Making connection to tb_melding_info
-        $conn_info = $conn;
-        // Query to retrieve information from tb_melding_info
-        $query_info = "SELECT * FROM tb_melding_info WHERE melding_info_uuid = '{$row['melding_spoed_uuid']}'";
-        $result_info = mysqli_query($conn_info, $query_info);
+// Execute the statement
+mysqli_stmt_execute($stmt);
 
-        // Checking for SQL errors
-        if (!$result_info) {
-            // If there's an SQL error, set $type_ongeval to 0
-            $type_ongeval = 0;
-        } else {
-            // If no SQL error, fetch the data
-            $row_info = mysqli_fetch_assoc($result_info);
-            $type_ongeval = isset($row_info['type_ongeval']) ? $row_info['type_ongeval'] : 0;
-        }
+// Bind result variables
+mysqli_stmt_bind_result($stmt, $melding_spoed_uuid, $gebruikersnaam, $tijd_melding, $status, $melding_info_uuid, $type_ongeval);
 
-        // Close the connection to tb_melding_info
-        mysqli_close($conn_info);
+// Output header
+echo "<header><h1>Melding Details</h1></header>";
 
-        // Determine the value of $type_ongeval_var based on $type_ongeval
-        if ($type_ongeval == 0) {
-            $type_ongeval_var = "ongeval";
-        } elseif ($type_ongeval == 1) {
-            $type_ongeval_var = "hoogurgent";
-        } else {
-            $type_ongeval_var = "urgent";
-        }
-
-        // Output based on conditions
-        echo $status == 1 ? "<button class=\"statusactive\">&nbsp;</button>" : "<button class=\"statushandeld\">&nbsp;</button>";
-        echo "<button class=\"statusactive\">" . $username . " | " . $tijd_melding . "</button>";
-        echo "<button class=\"urgent\">" . ucfirst($type_ongeval_var) . "</button><br>";
+// Loop through the result set
+while (mysqli_stmt_fetch($stmt)) {
+    // Determine the value of $type_ongeval_var based on $type_ongeval
+    if ($type_ongeval === null) {
+        $type_ongeval_var = "ongeval";
+    } elseif ($type_ongeval == 1) {
+        $type_ongeval_var = "hoogurgent";
+    } else {
+        $type_ongeval_var = "urgent";
     }
+
+    // Output section with link to admin.php with UUID parameter
+    echo "<section>";
+    echo "<a href='./admin.php?uuid=$melding_info_uuid'>";
+    echo $status == 1 ? "<button class=\"statusactive\">&nbsp;</button>" : "<button class=\"statushandeld\">&nbsp;</button>";
+    echo "<button class=\"LoginButtons\">" . $gebruikersnaam . " | " . $tijd_melding . "</button>";
+    echo "<button class=\"urgent\">" . ucfirst($type_ongeval_var) . "</button><br>";
+    echo "</a></section>";
 }
 
-// Close the connection to tb_melding_spoed
-mysqli_close($conn);
+// Close the statement
+mysqli_stmt_close($stmt);
 
+// Close the connection to the database
+mysqli_close($conn);
 ?>
